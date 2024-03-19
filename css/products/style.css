@@ -1,0 +1,84 @@
+/* Example CSS styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 160px 20px 20px 20px;
+}
+
+
+
+.productContainer {
+    margin-bottom: 20px;
+    background-color:azure;
+}
+
+.productCard {
+    padding: 5px 5px;
+    display: flex;
+    border: 1px solid #ccc;
+}
+
+.productCard img {
+    max-width: 150px;
+    height: auto;
+}
+
+.productDetails {
+    padding: 10px;
+}
+
+.longDescription {
+    display: block;
+    color: black;
+}
+
+.descountOffer{
+    color: red;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Media query for mobile */
+@media only screen and (max-width: 600px) {
+    .productCard {
+        flex-direction: column;
+    }
+
+    .productImage {
+        text-align: center;
+    }
+
+    .longDescription {
+        display: none;
+    }
+
+    .productDetails {
+        text-align: center;
+    }
+}

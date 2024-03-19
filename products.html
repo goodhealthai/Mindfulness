@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindfulness Products Listing Page</title>
+    <meta name="keywords" content="Everyday Mindfulness, Tips To Incorporate Mindfulness, Download free, Video Training Series">
+    <meta name="description" content="Mindfulness products listings: Buy with discounts, get Offer & Free Download ">
+    <link rel="stylesheet" href="css/products/style.css">
+</head>
+<body>
+    <header>
+        <h1>Products Page</h1>
+        <form action="#" method="get">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button type="submit" id="searchButton">Search</button>
+        </form>
+    </header>
+
+    <main>
+        <div class="productContainer" id="everyday_incorporate_tips">
+            <a href="index.html">
+                <div class="productCard">
+                    <div class="productImage">
+                        <img src="images/5_Tips_To_Incorporate_Mindfulness_160/lead-magnet.png" alt="Product Image">
+                    </div>
+                    <div class="productDetails">
+                        <h2>Everyday Mindfulness: 5 Tips To Incorporate Mindfulness Into Your Daily Life</h2>
+                        <p class="longDescription">Implementing mindfulness in your daily routine is an easy way to keep yourself motivated throughout the day. 
+                            To help you integrate mindfulness in your everyday life, I've written a short ebook called Everyday Mindfulness where you'll learn 5 tips to incorporate mindfulness into your daily life.
+                            </p>
+                        <p class="descountOffer">100% FREE GUIDE!</p>
+                        <button>Visit The Offer Page</button>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- Repeat productContainer for other products -->
+        <div class="productContainer" id="mindfulness_video_training_series">
+            <a href="10-step-by-step-video-training-Series.html">
+                <div class="productCard">
+                    <div class="productImage">
+                        <img src="images/Mindfulness_10_Part_Training_Series/MindfulnessGOLD_160.jpg" alt="Product Image">
+                    </div>
+                    <div class="productDetails">
+                        <h2>Mindfulness: 10-Part Step-by-Step Video Training Series</h2>
+                        <p class="longDescription">Discover the transformative power of mindfulness, a profound meditation technique designed to soothe your mind and alleviate the pressures of daily life. Delve into this comprehensive video series, meticulously crafted to lead you on a journey of self-discovery and personal growth. 
+                        </p>
+                        <p class="descountOffer">80% OFF (for limited time only)</p>
+                        <button>Visit The Offer Page</button>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- Repeat productContainer for other products -->
+        <div class="productContainer" id="three">
+            <a href="#">
+                <div class="productCard">
+                    <div class="productImage">
+                        <img src="images/5_Tips_To_Incorporate_Mindfulness_160/lead-magnet.png" alt="Product Image">
+                    </div>
+                    <div class="productDetails">
+                        <h2>Product Title Three(coming soon)</h2>
+                        <p class="longDescription">Description</p>
+                        <p class="descountOffer">Offer Text</p>
+                        <button>Visit The Offer Page</button>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- Repeat productContainer for other products -->
+        <div class="productContainer" id="four">
+            <a href="#">
+                <div class="productCard">
+                    <div class="productImage">
+                        <img src="images/5_Tips_To_Incorporate_Mindfulness_160/lead-magnet.png" alt="Product Image">
+                    </div>
+                    <div class="productDetails">
+                        <h2>Product Title Four(coming soon)</h2>
+                        <p class="longDescription">Description</p>
+                        <p class="descountOffer">Offer Text</p>
+                        <button>Visit Landing Page</button>
+                    </div>
+                </div>
+            </a>
+        </div>  
+        <!-- Repeat productContainer for other products -->
+        <div class="productContainer" id="five">
+            <a href="#">
+                <div class="productCard">
+                    <div class="productImage">
+                        <img src="images/5_Tips_To_Incorporate_Mindfulness_160/lead-magnet.png" alt="Product Image">
+                    </div>
+                    <div class="productDetails">
+                        <h2>Product Title Five(coming soon)</h2>
+                        <p class="longDescription">Description</p>
+                        <p class="descountOffer">Offer Text</p>
+                        <button>Visit Landing Page</button>
+                    </div>
+                </div>
+            </a>
+        </div>                       
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("searchButton").addEventListener("click", function(event) {
+                event.preventDefault(); // Prevent form submission
+    
+                var searchInput = document.getElementById("searchInput").value.toLowerCase(); // Get search input value
+                var elements = document.querySelectorAll('[id*="' + searchInput + '"]'); // Select elements whose ID contains the search input value
+    
+                if (elements.length > 0) {
+                    var headerHeight = document.querySelector('header').offsetHeight; // Get the height of the header
+                    var offset = elements[0].getBoundingClientRect().top + window.scrollY - headerHeight; // Calculate the offset to scroll to
+                    window.scrollTo({ top: offset, behavior: 'smooth' }); 
+                }
+            });
+    
+
+            function scrollDownByPixels() {
+                var headerHeight = document.querySelector('header').offsetHeight; // Get the height of the header  
+                var currentScrollPosition = window.scrollY;
+                window.scrollTo({ top: currentScrollPosition - headerHeight, behavior: 'smooth' });
+            }
+
+            var hash = window.location.hash;
+            if (hash) { 
+                setTimeout(scrollDownByPixels, 3000);
+            }
+
+        });
+    </script>
+    
+</body>
+</html>
