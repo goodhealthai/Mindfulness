@@ -40,6 +40,12 @@
   <!-- Top Body -->
   <section class="top-body">
     <div class="left-column">
+      <div class="hash-container">
+        <a href="#" target="_blank" id="link">
+        <h2 id="title">Pay $19.40 for Mindfulness: 10 Part Video Training Series</h2>
+        <h4 id="cta">PAY NOW</h4>
+        </a>
+      </div>
       <div class="article-container">
         <h3>Article Title 1</h3>
         <p>Article description goes here.</p>
@@ -94,7 +100,6 @@
       hamburgerIcon.addEventListener('click', function() {
         navMenu.classList.toggle('active');
       });
-    
       // JavaScript to handle submenu toggle in mobile mode
       var navItems = document.querySelectorAll('.nav-item');
       navItems.forEach(function(navItem) {
@@ -104,6 +109,36 @@
           }
         });
       });
+
+      function showContainer(value) {
+        console.log(value);
+        var container = document.querySelector('div.hash-container');
+        var titleElement = document.getElementById("title");
+        var ctaElement = document.getElementById("cta");
+        var linkElement = document.getElementById("link");
+        if(value.toLowerCase() === "paym002"){
+          linkElement.setAttribute("href", "https://paypal.me/goodhealthai/19.40");
+          titleElement.innerHTML = "Pay $19.40 for Mindfulness: 10-Part Step-by-Step Video Training Series";
+          ctaElement.innerHTML = "CLICK TO PAY";
+          container.setAttribute("style", "display: block;");
+        }
+        else if(value.toLowerCase() === "downloadm001"){
+          linkElement.setAttribute("href", "https://drive.google.com/file/d/1bdpKVynYLpLUZc5SEh5FSKuEXGOqqVeJ/view");
+          titleElement.innerHTML = "Everyday Mindfulness: 5 Tips To Incorporate Mindfulness Into Your Daily Life";
+          ctaElement.innerHTML = "Click To Download Audio";
+          container.setAttribute("style", "display: block;");
+        }
+        else{
+          container.setAttribute("style", "display: none;");
+        }
+        
+      }
+
+      var hash = window.location.hash;
+      if (hash) { 
+          showContainer(hash.substring(1));
+      }
+
     });
     </script>
 </body>

@@ -11,12 +11,6 @@
   color: #fff;
   padding: 5px;
 }
-/* 
-.nav-banner {
-  display: flex;
-  flex-direction: row-reverse;
-}
-check up */
 
 /* Main navigation styles */
 .nav {
@@ -131,6 +125,24 @@ check up */
   }
 }
 
+/*hash container*/
+.hash-container{
+  display: none; 
+  border: 3px dotted red; 
+  margin-bottom: 20px; 
+  text-align: center; 
+  padding: 10px; 
+  background-color: rgb(178, 214, 190);
+}
+
+.hash-container #link{
+  text-decoration: none;
+}
+
+.hash-container #cta{
+  color: red;
+  font-weight: bold;
+}
 
 /* Top Body Styles */
 .top-body {
